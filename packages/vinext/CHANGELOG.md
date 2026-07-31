@@ -1,5 +1,54 @@
 # vinext
 
+## 1.0.0-beta.5
+
+### Bug Fixes
+
+#### App Router
+
+- reject Route Handlers as interception source routes (#2732)
+- preserve page result render ordering (#2760)
+- render pages before consuming layouts (#2751)
+- honor cacheLife stale on the client router (#2708)
+
+#### Build
+
+- exclude filtered require.context modules (#2736)
+- recognize Vite dist client aliases (#2750)
+- support dynamic package subpath imports (#2746)
+- skip unhelpful precompressed variants (#2712)
+
+#### Server
+
+- evaluate lazy route modules outside the request context (#2740)
+- transfer request bodies into NextRequest instead of teeing (#2741)
+- support Node production entry contracts (#2749)
+- reject unsupported static asset methods (#2714)
+- honor static freshness validators (#2715)
+- use weak comparison for If-None-Match (#2710)
+- serve static assets with standard MIME types (#2713)
+
+#### Misc
+
+- **Pages Router:** stream piped API responses with backpressure (#2735)
+- **Router:** minimize client rewrite manifests (#2734)
+- **Middleware:** preserve headers for empty override value (#2767)
+- **Create Vinext App:** generate next env on first run (#2768)
+- **Middleware:** stop restoring credentials middleware deleted before external rewrites (#2739)
+- **Cache:** bypass shared "use cache" entries in draft mode (#2744)
+- **Pages:** refresh next/head tags when regenerating ISR HTML (#2729)
+- **Document:** HTML-escape NextScript.getInlineScriptSource output (#2727)
+- **Navigation:** reuse router.prefetch payloads during navigation (#2709)
+- **Metadata:** preserve Content-Length for fully buffered responses (#2703)
+- **Image:** match Next.js 16 default image sizes (#2704)
+
+### Contributors
+
+- @Boyeep
+- @james-elicx
+- @NathanDrake2406
+- @tomvoss
+
 ## 1.0.0-beta.4
 
 ### Bug Fixes
